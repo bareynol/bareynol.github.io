@@ -12,11 +12,7 @@ import Education from "src/components/Education"
 // import Toast from "src/components/Toast"
 
 const useStyles = makeStyles(theme => ({
-  title: {
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(10),
-  },
-  divider: {
+  marginSpacing: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
@@ -29,50 +25,61 @@ const ResumePage = () => {
     <Layout>
       <SEO title="Resume" />
       <Container>
-        <div style={{ marginTop: 16, marginBottom: 16 }}>
+        <div className={classes.marginSpacing}>
           <Divider />
           <Grid
             container
+            spacing={1}
             wrap="wrap"
             justify="space-between"
             alignItems="baseline"
-            style={{ marginTop: 16, marginBottom: 16 }}
+            className={classes.marginSpacing}
           >
-            <Grid item style={{ flexGrow: 1 }}>
+            <Grid item>
               <Typography>
                 There are also a PDF and simplified version available
               </Typography>
             </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                color="primary"
-                endIcon={<DownloadIcon />}
-                style={{ marginRight: 8 }}
-              >
-                Download PDF
-              </Button>
-              <Button variant="contained" color="secondary">
-                View Simplified
-              </Button>
+            <Grid item container spacing={1} style={{ width: "auto" }}>
+              <Grid item>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  endIcon={<DownloadIcon />}
+                  style={{ marginRight: 8 }}
+                >
+                  Download PDF
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  href="/resume/simple"
+                >
+                  View Simplified
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
           <Divider />
         </div>
 
-        <Typography variant="h4">Education</Typography>
+        <Typography variant="h3">Education</Typography>
         <Education />
 
         {/* Work Experience */}
-        <Typography variant="h4">Work Experience</Typography>
-        <Grid container spacing={3} direction="column">
-          <Grid item>
+        <Typography variant="h3" style={{ marginTop: 36 }}>
+          Work Experience
+        </Typography>
+        <Grid container spacing={0} direction="column">
+          <Grid item style={{ marginBottom: 32 }}>
             <WorkExperienceCard job={workExperience.growratio} />
           </Grid>
-          <Grid item>
+          <Grid item style={{ marginBottom: 32 }}>
             <WorkExperienceCard job={workExperience.zanbato} />
           </Grid>
-          <Grid item>
+          <Grid item style={{ marginBottom: 32 }}>
             <WorkExperienceCard job={workExperience.ndimension} />
           </Grid>
         </Grid>

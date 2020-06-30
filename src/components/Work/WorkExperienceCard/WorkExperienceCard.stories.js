@@ -5,11 +5,7 @@ import growratioBg from "src/images/workplaces/growratio/oldbg.jpg"
 import zanbatoMap from "src/images/workplaces/zanbato/map.png"
 import ndimensionMap from "src/images/workplaces/ndimension/map.png"
 import ndimensionBg from "src/images/workplaces/ndimension/background.png"
-import {
-  growratioTheme,
-  zanbatoTheme,
-  ndimensionTheme,
-} from "src/data/companyThemes"
+
 import GrowratioDetails from "src/components/Work/WorkExperienceCard/GrowratioDetails"
 import { responsibilitiesData } from "src/components/Work/WorkExperienceCard/Responsibilities.stories"
 import { workBioData } from "src/components/Work/WorkExperienceCard/WorkBio.stories"
@@ -42,7 +38,6 @@ const workGrowratioData = {
   company: {
     ...workData.company,
     name: "Growratio Inc.",
-    theme: growratioTheme,
     details: <GrowratioDetails />,
   },
   role: "Lead Developer",
@@ -54,7 +49,6 @@ const workZanbatoData = {
   company: {
     ...workData.company,
     name: "Zanbato Inc.",
-    theme: zanbatoTheme,
     mapImg: zanbatoMap,
     details: <ZanbatoDetails />,
     location: "Mountain View, CA, USA",
@@ -68,7 +62,6 @@ const workNdimensionData = {
   company: {
     ...workData.company,
     name: "N-Dimension Solutions Inc.",
-    theme: ndimensionTheme,
     details: <NdimensionDetails />,
     location: "Richmond Hill, ON, Canada",
     background: ndimensionBg,

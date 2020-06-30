@@ -3,7 +3,6 @@ import {
   Typography,
   ListItem,
   List,
-  ListSubheader,
   ListItemText,
   Card,
   makeStyles,
@@ -14,8 +13,10 @@ import PropTypes from "prop-types"
 
 const useStyles = makeStyles(theme => ({
   card: {
-    backgroundColor: theme.palette.background.default,
     height: "100%",
+    [theme.breakpoints.up("md")]: {
+      backgroundColor: theme.palette.background.default,
+    },
   },
   responsibilityTitle: {
     color: theme.palette.primary.light,

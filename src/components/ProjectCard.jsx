@@ -11,6 +11,7 @@ import {
   Grid,
 } from "@material-ui/core"
 import FrameworkList from "src/components/FrameworkList"
+import BuildIcon from "@material-ui/icons/Build"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,7 +47,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function ProjectCard({
-  project: { title, url, description, frameworks, image },
+  project: { title, url, description, frameworks, image, underConstruction },
 }) {
   const classes = useStyles()
   return (
@@ -58,7 +59,14 @@ function ProjectCard({
         style={{ height: "100%" }}
       >
         <Grid item>
-          {image ? (
+          {underConstruction ? (
+            <CardMedia className={classes.missingImage}>
+              <Typography variant="h3" align="center">
+                Under Construction
+              </Typography>
+              <BuildIcon color="primary" style={{ fontSize: 100 }} />
+            </CardMedia>
+          ) : image ? (
             <CardMedia
               component="img"
               image={image}
@@ -78,7 +86,7 @@ function ProjectCard({
           )}
         </Grid>
         <Grid item zeroMinWidth>
-          <CardContent style={{ width: 345 }}>
+          <CardContent>
             <Typography gutterBottom variant="h6" noWrap>
               {title}
             </Typography>
@@ -122,8 +130,9 @@ ProjectCard.propTypes = {
     title: PropTypes.string,
     url: PropTypes.string,
     description: PropTypes.string,
-    frameworks: PropTypes.arrayOf(PropTypes.string),
+    frameworks: FrameworkList.propTypes.frameworks,
     image: PropTypes.any,
+    underConstruction: PropTypes.bool,
   }),
 }
 

@@ -7,7 +7,7 @@ const consoleFontFamily = {
 
 const primaryColor = "#0f0"
 
-export default responsiveFontSizes(
+const theme = responsiveFontSizes(
   createMuiTheme({
     palette: {
       type: "dark",
@@ -43,3 +43,17 @@ export default responsiveFontSizes(
     },
   })
 )
+
+theme.overrides = {
+  ...theme.overrides,
+  MuiContainer: {
+    root: {
+      [theme.breakpoints.only("xs")]: {
+        paddingLeft: theme.spacing(0.5),
+        paddingRight: theme.spacing(0.5),
+      },
+    },
+  },
+}
+
+export default theme

@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import {
   makeStyles,
   GridList,
@@ -24,7 +25,7 @@ function FrameworkList({ frameworks, title }) {
 
   return (
     <>
-      <Typography variant="subtitle2">{title || `Frameworks Used:`}</Typography>
+      <Typography variant="subtitle2">{title}</Typography>
       <GridList cellHeight="auto">
         {frameworks.map((f, index) => (
           <GridListTile key={index} classes={{ tile: classes.tileWrapper }}>
@@ -34,14 +35,15 @@ function FrameworkList({ frameworks, title }) {
       </GridList>
     </>
   )
+}
 
-  // return (
-  //   <ul className={classes.frameworksList}>
-  //     {frameworks.map((f, index) => (
-  //       <FrameworkItem key={index} item={f} />
-  //     ))}
-  //   </ul>
-  // )
+FrameworkList.propTypes = {
+  frameworks: PropTypes.arrayOf(FrameworkItem.propTypes.item).isRequired,
+  title: PropTypes.string,
+}
+
+FrameworkList.defaultProps = {
+  title: `Frameworks Used`,
 }
 
 export default FrameworkList

@@ -41,11 +41,16 @@ export default function GrowratioDetails() {
           <Grid item>
             <img
               src={logo}
-              style={{ width: "50%", margin: "auto", display: "block" }}
+              style={{
+                width: 300,
+                maxWidth: "100%",
+                margin: "auto",
+                display: "block",
+              }}
             />
           </Grid>
           <Grid item container>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <div
                 style={{
                   borderTop: `3px solid ${grBlue}`,
@@ -56,22 +61,24 @@ export default function GrowratioDetails() {
                   marginBottom: 16,
                 }}
               >
-                <Typography variant="h3" style={{ fontWeight: 700 }}>
-                  Controlled Environment Agriculture for the Digital Age
+                <Typography
+                  variant="h4"
+                  color="textPrimary"
+                  style={{ fontWeight: 700 }}
+                >
+                  Controlled Environment Agriculture
                 </Typography>
                 <Typography color="textSecondary" variant="h6">
-                  Growratio’s collection of integrated products and services
-                  form a complete solution to guarantee the success of your
-                  operation. Controlled Environment Agriculture is difficult to
-                  perfect without the right technology, team and tools.
-                  Growratio is the solution.
+                  Growratio combines IoT with lights, environment sensors, and
+                  climate controls to provide automated control, alerting, and
+                  analysis of indoor agriculture.
                 </Typography>
               </div>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <img
                 src={devices}
-                style={{ width: "75%", marginLeft: "auto", display: "block" }}
+                style={{ width: "75%", margin: "auto", display: "block" }}
               />
             </Grid>
           </Grid>

@@ -30,6 +30,21 @@ const useStyles = makeStyles(theme => ({
   },
   skills: {
     padding: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      // backgroundColor: theme.palette.background.default,
+      borderLeftColor: theme.palette.divider,
+      borderLeft: "1px solid",
+      borderRight: "1px solid",
+      borderRightColor: theme.palette.divider,
+    },
+  },
+  mapImg: {
+    width: "100%",
+    height: "100%",
+    objectFit: "none",
+    [theme.breakpoints.down("sm")]: {
+      objectFit: "cover",
+    },
   },
 }))
 
@@ -39,16 +54,19 @@ function WorkBio({
 }) {
   const classes = useStyles()
   return (
-    <>
-      <Grid container direction="row-reverse">
-        <Grid item xs={4} md={12}>
-          <img
-            src={mapImg}
-            style={{ width: "100%", height: "100%", objectFit: "none" }}
-          />
+    <Grid container direction="column">
+      <Grid item container direction="row-reverse">
+        <Grid item xs={4} sm={3} md={12}>
+          <img src={mapImg} className={classes.mapImg} />
         </Grid>
-        <Grid item xs={8} md={12}>
+        <Grid item xs={8} sm={9} md={12}>
           <List className={classes.root} dense>
+            <ListItem>
+              <ListItemIcon className={classes.listIcon}>
+                <BusinessIcon />
+              </ListItemIcon>
+              <ListItemText>{name}</ListItemText>
+            </ListItem>
             <ListItem>
               <ListItemIcon className={classes.listIcon}>
                 <LocationIcon />
@@ -66,7 +84,11 @@ function WorkBio({
               </ListItemText>
             </ListItem>
           </List>
+        </Grid>
+        <Grid item xs={12}>
           <Divider />
+        </Grid>
+        <Grid item xs={12}>
           <div className={classes.skills}>
             <FrameworkList
               frameworks={skillsRequired}
@@ -76,7 +98,7 @@ function WorkBio({
         </Grid>
       </Grid>
       <Divider />
-    </>
+    </Grid>
   )
 }
 

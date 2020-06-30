@@ -1,13 +1,28 @@
 import React from "react"
-import { Card, CardContent, Typography, Grid } from "@material-ui/core"
+import {
+  Card,
+  CardContent,
+  Typography,
+  Grid,
+  makeStyles,
+} from "@material-ui/core"
 
 import uwaterlooLogo from "src/images/uwaterloo_logo.png"
 
+const useStyles = makeStyles(theme => ({
+  container: {
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "center",
+    },
+  },
+}))
+
 export default function Education() {
+  const classes = useStyles()
   return (
     <Card style={{ marginBottom: 16 }}>
       <CardContent>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className={classes.container}>
           <Grid item>
             <img src={uwaterlooLogo} style={{ height: 56, width: 56 }} />
           </Grid>

@@ -5,19 +5,15 @@ import ProjectCard from "src/components/ProjectCard"
 
 function ProjectCardList({ projects }) {
   return (
-    <Grid
-      container
-      spacing={4}
-      direction="row"
-      justify="space-between"
-      alignItems="stretch"
-    >
-      {projects.map((proj, index) => (
-        <Grid item key={index}>
-          <ProjectCard project={proj} />
-        </Grid>
-      ))}
-    </Grid>
+    <div style={{ overflow: "hidden" }}>
+      <Grid container spacing={4} direction="row" justify="center" style={{}}>
+        {projects.map((proj, index) => (
+          <Grid item key={index}>
+            <ProjectCard project={proj} />
+          </Grid>
+        ))}
+      </Grid>
+    </div>
   )
 }
 

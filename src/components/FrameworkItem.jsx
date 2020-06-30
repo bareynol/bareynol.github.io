@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-
 import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core"
 import frameworks from "src/data/frameworks"
 
@@ -11,6 +10,10 @@ function FrameworkItem({ item }) {
       <ListItemText primary={item.title} />
     </ListItem>
   )
+}
+
+FrameworkItem.propTypes = {
+  item: PropTypes.oneOf(Object.values(frameworks)).isRequired,
 }
 
 export default FrameworkItem

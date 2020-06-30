@@ -1,9 +1,5 @@
 import React from "react"
-import {
-  growratioTheme,
-  zanbatoTheme,
-  ndimensionTheme,
-} from "src/data/companyThemes"
+
 import growratioMap from "src/images/workplaces/growratio/map.png"
 import zanbatoMap from "src/images/workplaces/zanbato/map.png"
 import ndimensionMap from "src/images/workplaces/ndimension/map.png"
@@ -17,7 +13,6 @@ export const growratio = {
   company: {
     name: "Growratio Inc.",
     location: "Toronto, ON, Canada",
-    theme: growratioTheme,
     mapImg: growratioMap,
     details: <GrowratioDetails />,
     website: "https://growrat.io",
@@ -77,7 +72,6 @@ export const zanbato = {
   company: {
     name: "Zanbato Inc.",
     location: "Mountain View, CA, USA",
-    theme: zanbatoTheme,
     mapImg: zanbatoMap,
     details: <ZanbatoDetails />,
     website: "https://zanbato.com",
@@ -115,7 +109,6 @@ export const ndimension = {
   company: {
     name: "N-Dimension Solutions Inc.",
     location: "Richmond Hill, ON, Canada",
-    theme: ndimensionTheme,
     mapImg: ndimensionMap,
     details: <NdimensionDetails />,
     website: "https://n-dimension.com",

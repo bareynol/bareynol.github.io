@@ -45,45 +45,45 @@ function WorkExperienceCard({
 }) {
   const classes = useStyles()
   return (
-    <ThemeProvider theme={theme}>
-      <Card>
-        <Grid container>
-          <Grid item xs={12}>
-            <CardContent className={classes.titleContent}>
+    <Card>
+      <Grid container>
+        <Grid item xs={12}>
+          <CardContent className={classes.titleContent}>
+            <div>
               <Typography variant="h4" display="inline">
                 {role}
-                <Typography variant="subtitle1" display="inline">
-                  {" at "}
-                </Typography>
-                <Typography variant="h5" display="inline" color="primary">
-                  {name}
-                </Typography>
               </Typography>
-              <Typography variant="overline" color="textSecondary">
-                {dates}
+              <Typography variant="subtitle1" display="inline">
+                {" at "}
               </Typography>
-            </CardContent>
-            <Divider />
-          </Grid>
-          <Grid item xs={12}>
-            {details}
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <div className={classes.workBioContent}>
-              <WorkBio
-                {...{
-                  skillsRequired,
-                  company: { name, location, mapImg, website },
-                }}
-              />
+              <Typography variant="h5" display="inline" color="textPrimary">
+                {name}
+              </Typography>
             </div>
-          </Grid>
-          <Grid item xs={12} md={9}>
-            <Responsibilities responsibilities={responsibilities} />
-          </Grid>
+            <Typography variant="overline" color="textSecondary">
+              {dates}
+            </Typography>
+          </CardContent>
+          <Divider />
         </Grid>
-      </Card>
-    </ThemeProvider>
+        <Grid item xs={12}>
+          {details}
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <div className={classes.workBioContent}>
+            <WorkBio
+              {...{
+                skillsRequired,
+                company: { name, location, mapImg, website },
+              }}
+            />
+          </div>
+        </Grid>
+        <Grid item xs={12} md={9}>
+          <Responsibilities responsibilities={responsibilities} />
+        </Grid>
+      </Grid>
+    </Card>
   )
 }
 

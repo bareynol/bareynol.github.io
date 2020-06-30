@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function GrowratioDetails() {
+export default function NdimensionDetails() {
   const classes = useStyles()
   return (
     <CardMedia
@@ -41,10 +41,18 @@ export default function GrowratioDetails() {
       >
         <Grid container direction="column" alignItems="center">
           <Grid item className={classes.logo}>
-            <img src={logo} style={{ margin: "auto", display: "block" }} />
+            <img
+              src={logo}
+              style={{
+                width: 300,
+                maxWidth: "100%",
+                margin: "auto",
+                display: "block",
+              }}
+            />
           </Grid>
           <Grid item container>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <div>
                 <Typography
                   variant="h3"
