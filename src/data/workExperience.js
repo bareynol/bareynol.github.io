@@ -7,7 +7,6 @@ import GrowratioDetails from "src/components/Work/WorkExperienceCard/GrowratioDe
 import NdimensionDetails from "src/components/Work/WorkExperienceCard/NdimensionDetails"
 import ZanbatoDetails from "src/components/Work/WorkExperienceCard/ZanbatoDetails"
 import frameworks from "src/data/frameworks"
-import { responsibilitiesData } from "src/components/Work/WorkExperienceCard/Responsibilities.stories"
 
 export const growratio = {
   company: {

@@ -61,7 +61,7 @@ function ProjectCard({
         <Grid item>
           {underConstruction ? (
             <CardMedia className={classes.missingImage}>
-              <Typography variant="h3" align="center">
+              <Typography variant="h4" align="center">
                 Under Construction
               </Typography>
               <BuildIcon color="primary" style={{ fontSize: 100 }} />
@@ -76,7 +76,7 @@ function ProjectCard({
             />
           ) : (
             <CardMedia className={classes.missingImage}>
-              <Typography variant="h3" align="center">
+              <Typography variant="h4" align="center">
                 Missing Image
               </Typography>
               <Typography variant="h1" align="center">

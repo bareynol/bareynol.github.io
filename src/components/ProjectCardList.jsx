@@ -6,7 +6,13 @@ import ProjectCard from "src/components/ProjectCard"
 function ProjectCardList({ projects }) {
   return (
     <div style={{ overflow: "hidden" }}>
-      <Grid container spacing={4} direction="row" justify="center" style={{}}>
+      <Grid
+        container
+        spacing={4}
+        direction="row"
+        justify="space-evenly"
+        style={{}}
+      >
         {projects.map((proj, index) => (
           <Grid item key={index}>
             <ProjectCard project={proj} />

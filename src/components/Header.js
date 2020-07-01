@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
 
 const sections = [
   { title: "Projects", url: "#" },
-  { title: "Portfolio", url: "#" },
+  { title: "", url: null }, // for spacing
   { title: "Resume", url: "/resume" },
 ]
 
@@ -93,7 +93,7 @@ function Header(props) {
             target="_blank"
             rel="noreferrer"
           >
-            View my Gitlab
+            My Gitlab
           </Button>
         </Toolbar>
       </Hidden>
