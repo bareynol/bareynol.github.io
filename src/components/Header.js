@@ -39,9 +39,9 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const sections = [
-  { title: "Projects", url: "#" },
+  { title: "Projects", url: "/projects" },
   { title: "", url: null }, // for spacing
-  { title: "Resume", url: "/resume" },
+  { title: "Résumé", url: "/resume" },
 ]
 
 function Header(props) {

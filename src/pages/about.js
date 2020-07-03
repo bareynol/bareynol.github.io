@@ -20,18 +20,18 @@ import FrameworkList from "src/components/FrameworkList"
 import profilePicture from "src/images/me.jpg"
 
 const content = [
-  {
-    title: "Who I am",
-    id: "Who_I_am",
-    body: (
-      <div>
-        <Avatar style={{ width: 128, height: 128 }} src={profilePicture} />
-        <Typography paragraph style={{ marginTop: 8 }}>
-          I am Brian, a programmer from Ontario, Canada
-        </Typography>
-      </div>
-    ),
-  },
+  // {
+  //   title: "Who I am",
+  //   id: "Who_I_am",
+  //   body: (
+  //     <div>
+  //       <Avatar style={{ width: 128, height: 128 }} src={profilePicture} />
+  //       <Typography paragraph style={{ marginTop: 8 }}>
+  //         I am Brian, a programmer from Ontario, Canada
+  //       </Typography>
+  //     </div>
+  //   ),
+  // },
   {
     title: "What I do",
     id: "What_I_do",
@@ -262,24 +262,17 @@ const ContactDetails = () => (
     style={{ backgroundColor: "#111111", marginTop: 32, marginBottom: 32 }}
   >
     <CardContent>
-      <Typography variant="h6">Contact Details</Typography>
-      <Grid container>
-        <Grid item>
-          <ListItem>
-            <ListItemIcon style={{ minWidth: 32 }}>
-              <PersonIcon />
-            </ListItemIcon>
-            <ListItemText>Brian Reynolds</ListItemText>
-          </ListItem>
-        </Grid>
-        <Grid item>
-          <ListItem>
-            <ListItemIcon style={{ minWidth: 32 }}>
-              <EmailIcon />
-            </ListItemIcon>
-            <ListItemText>brireyn@gmail.com</ListItemText>
-          </ListItem>
-        </Grid>
+      <Grid container direction="column" alignItems="center">
+        <Avatar style={{ width: 128, height: 128 }} src={profilePicture} />
+        <Typography align="center" style={{ marginTop: 8 }}>
+          I am Brian Reynolds, a programmer from Ontario, Canada
+        </Typography>
+        <Typography variant="body2">
+          Reach me here:{" "}
+          <Link color="secondary" href="mailto:brireyn@gmail.com">
+            brireyn@gmail.com
+          </Link>{" "}
+        </Typography>
       </Grid>
     </CardContent>
   </Card>
