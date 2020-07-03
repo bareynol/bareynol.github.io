@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Brian Reynolds`,
-    description: `A website to display my portfolio and other useful things.`,
+    description: `I am a software developer, and this is my site.`,
     author: `@bareynol`,
   },
   plugins: [
@@ -21,10 +21,18 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#111111`,
+        theme_color: `#0f0f0f`,
         display: `minimal-ui`,
         icon: `src/images/br-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Roboto"],
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
