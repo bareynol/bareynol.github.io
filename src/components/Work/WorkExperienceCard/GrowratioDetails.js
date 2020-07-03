@@ -2,13 +2,7 @@ import React from "react"
 import logo from "src/images/workplaces/growratio/growratio-wordmark-herolight.png"
 import devices from "src/images/workplaces/growratio/devices.png"
 import background from "src/images/workplaces/growratio/oldbg.jpg"
-import {
-  Container,
-  Grid,
-  Typography,
-  CardMedia,
-  makeStyles,
-} from "@material-ui/core"
+import { Grid, Typography, CardMedia, makeStyles } from "@material-ui/core"
 
 const grBlue = "#377e96"
 
@@ -47,6 +41,7 @@ export default function GrowratioDetails() {
                 margin: "auto",
                 display: "block",
               }}
+              alt="Growratio Logo"
             />
           </Grid>
           <Grid item container>
@@ -79,6 +74,7 @@ export default function GrowratioDetails() {
               <img
                 src={devices}
                 style={{ width: "75%", margin: "auto", display: "block" }}
+                alt="Growratio Devices"
               />
             </Grid>
           </Grid>
