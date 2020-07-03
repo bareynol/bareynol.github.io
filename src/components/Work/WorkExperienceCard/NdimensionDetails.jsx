@@ -1,13 +1,7 @@
 import React from "react"
 import logo from "src/images/workplaces/ndimension/logo.png"
 import background from "src/images/workplaces/ndimension/background.png"
-import {
-  CardMedia,
-  Container,
-  Grid,
-  Typography,
-  makeStyles,
-} from "@material-ui/core"
+import { CardMedia, Grid, Typography, makeStyles } from "@material-ui/core"
 
 const useStyles = makeStyles(theme => ({
   logo: {
@@ -49,6 +43,7 @@ export default function NdimensionDetails() {
                 margin: "auto",
                 display: "block",
               }}
+              alt="N-Dimension logo"
             />
           </Grid>
           <Grid item container>

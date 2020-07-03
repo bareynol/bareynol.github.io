@@ -5,11 +5,11 @@ import Layout from "src/components/Layout"
 import SEO from "src/components/seo"
 import Typography from "@material-ui/core/Typography"
 import { Container, makeStyles, Grid, Button, Divider } from "@material-ui/core"
-import DownloadIcon from "@material-ui/icons/Save"
+// import DownloadIcon from "@material-ui/icons/Save"
 import * as workExperience from "src/data/workExperience"
 import WorkExperienceCard from "src/components/Work/WorkExperienceCard/WorkExperienceCard"
 import Education from "src/components/Education"
-// import Toast from "src/components/Toast"
+import { Link as GatsbyLink } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   marginSpacing: {
@@ -58,7 +58,8 @@ const ResumePage = () => {
                 <Button
                   variant="contained"
                   color="secondary"
-                  href="/resume/simple"
+                  component={GatsbyLink}
+                  to="/resume/simple"
                 >
                   View Simplified
                 </Button>

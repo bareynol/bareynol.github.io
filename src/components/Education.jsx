@@ -24,7 +24,11 @@ export default function Education() {
       <CardContent>
         <Grid container spacing={2} className={classes.container}>
           <Grid item>
-            <img src={uwaterlooLogo} style={{ height: 56, width: 56 }} />
+            <img
+              src={uwaterlooLogo}
+              style={{ height: 56, width: 56 }}
+              alt="University of Waterloo Logo"
+            />
           </Grid>
           <Grid item>
             <Typography variant="h6">University of Waterloo</Typography>

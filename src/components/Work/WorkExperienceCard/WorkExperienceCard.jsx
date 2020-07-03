@@ -1,18 +1,14 @@
 import React from "react"
 import {
   Card,
-  CardMedia,
   Grid,
   CardContent,
   Typography,
-  ThemeProvider,
   makeStyles,
   Divider,
 } from "@material-ui/core"
 import Responsibilities from "src/components/Work/WorkExperienceCard/Responsibilities"
 import WorkBio from "src/components/Work/WorkExperienceCard/WorkBio"
-
-// import bg from "src/images/workplaces/growratio/bg.jpg"
 
 const useStyles = makeStyles(theme => ({
   cardMedia: {

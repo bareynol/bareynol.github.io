@@ -1,11 +1,11 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { makeStyles } from "@material-ui/core/styles"
 import Toolbar from "@material-ui/core/Toolbar"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import Link from "@material-ui/core/Link"
 import Gitlab from "mdi-material-ui/Gitlab"
+import { Link as GatsbyLink } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -61,8 +61,9 @@ function Header(props) {
             noWrap
             key={section.title}
             variant="button"
-            href={section.url}
             className={classes.toolbarLink}
+            component={section.url ? GatsbyLink : "a"}
+            to={section.url}
           >
             {section.title}
           </Link>
@@ -83,7 +84,7 @@ function Titlebar(props) {
     <>
       {/* Show this title on separate toolbar for small screen sizes */}
       <Toolbar className={`${classes.toolbar} ${classes.hideLarge}`}>
-        <Link className={classes.toolbarTitle} href="/">
+        <Link className={classes.toolbarTitle} component={GatsbyLink} to="/">
           <Typography variant="h5" align="center" noWrap>
             Brian Reynolds
           </Typography>
@@ -93,14 +94,21 @@ function Titlebar(props) {
         </Link>
       </Toolbar>
       <Toolbar className={classes.toolbar}>
-        <Button size="small" color="primary" href="/about" style={{ flex: 1 }}>
+        <Button
+          size="small"
+          color="primary"
+          component={GatsbyLink}
+          to="/about"
+          style={{ flex: 1 }}
+        >
           About Me
         </Button>
 
         {/* Hide the title in this tool bar for small screen sizes */}
         <Link
           className={`${classes.toolbarTitle} ${classes.hideSmall}`}
-          href="/"
+          component={GatsbyLink}
+          to="/"
         >
           <Typography variant="h5" align="center" noWrap>
             Brian Reynolds
