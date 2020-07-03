@@ -4,9 +4,9 @@ import { Link as GatsbyLink } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Typography from "@material-ui/core/Typography"
-import { Container, makeStyles, Link, Divider, Grid } from "@material-ui/core"
+import { Container, makeStyles, Link, Divider } from "@material-ui/core"
 import clsx from "clsx"
-import Toast from "src/components/Toast"
+// import Toast from "src/components/Toast"
 import projectData from "src/data/projects"
 
 import ProjectCardList from "src/components/ProjectCardList"
@@ -48,12 +48,6 @@ const useStyles = makeStyles(theme => ({
     "50%": { borderRightColor: "#00ff00" },
   },
 }))
-
-const Highlighted = ({ children }) => (
-  <Typography display="inline" color="primary">
-    {children}
-  </Typography>
-)
 
 const IndexPage = () => {
   const classes = useStyles()

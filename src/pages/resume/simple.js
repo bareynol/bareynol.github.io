@@ -5,8 +5,9 @@ import Layout from "src/components/Layout"
 import SEO from "src/components/seo"
 import Typography from "@material-ui/core/Typography"
 import { Container, makeStyles, Grid, Button, Divider } from "@material-ui/core"
-import DownloadIcon from "@material-ui/icons/Save"
+// import DownloadIcon from "@material-ui/icons/Save"
 import * as workExperience from "src/data/workExperience"
+import { Link as GatsbyLink } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   marginSpacing: {
@@ -52,7 +53,12 @@ const SimpleResumePage = () => {
                 </Button>
               </Grid> */}
               <Grid item>
-                <Button variant="contained" color="secondary" href="/resume">
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  component={GatsbyLink}
+                  to="/resume"
+                >
                   View Detailed
                 </Button>
               </Grid>

@@ -4,18 +4,12 @@ import SEO from "src/components/seo"
 import {
   Container,
   Typography,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Grid,
   Card,
   CardContent,
   Link,
   Avatar,
 } from "@material-ui/core"
-import PersonIcon from "@material-ui/icons/Person"
-import EmailIcon from "@material-ui/icons/Email"
-import FrameworkItem from "src/components/FrameworkItem"
 import FrameworkList from "src/components/FrameworkList"
 import profilePicture from "src/images/me.jpg"
 

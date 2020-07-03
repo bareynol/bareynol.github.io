@@ -55,7 +55,11 @@ function WorkBio({
     <Grid container direction="column">
       <Grid item container direction="row-reverse">
         <Grid item xs={4} sm={3} md={12}>
-          <img src={mapImg} className={classes.mapImg} />
+          <img
+            src={mapImg}
+            className={classes.mapImg}
+            alt={`Map location of ${name}`}
+          />
         </Grid>
         <Grid item xs={8} sm={9} md={12}>
           <List className={classes.root} dense>
