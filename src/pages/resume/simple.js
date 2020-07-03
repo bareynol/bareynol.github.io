@@ -33,12 +33,15 @@ const SimpleResumePage = () => {
             className={classes.marginSpacing}
           >
             <Grid item>
-              <Typography>
+              {/* <Typography>
                 There are also a PDF and detailed version available
+              </Typography> */}
+              <Typography>
+                There is also a detailed version available
               </Typography>
             </Grid>
             <Grid item container spacing={1} style={{ width: "auto" }}>
-              <Grid item>
+              {/* <Grid item>
                 <Button
                   variant="contained"
                   color="primary"
@@ -47,7 +50,7 @@ const SimpleResumePage = () => {
                 >
                   Download PDF
                 </Button>
-              </Grid>
+              </Grid> */}
               <Grid item>
                 <Button variant="contained" color="secondary" href="/resume">
                   View Detailed

@@ -13,9 +13,7 @@ import {
 import BusinessIcon from "@material-ui/icons/Business"
 import LocationIcon from "@material-ui/icons/LocationOn"
 import WebsiteIcon from "@material-ui/icons/Language"
-import FrameworkItem from "src/components/FrameworkItem"
 import FrameworkList from "src/components/FrameworkList"
-import frameworks from "src/data/frameworks"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -103,7 +101,7 @@ function WorkBio({
 }
 
 WorkBio.propTypes = {
-  skillsRequired: PropTypes.arrayOf(PropTypes.oneOf(Object.values(frameworks))),
+  skillsRequired: FrameworkList.propTypes.frameworks,
   company: PropTypes.shape({
     name: PropTypes.string,
     location: PropTypes.string,

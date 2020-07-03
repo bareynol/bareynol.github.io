@@ -6,7 +6,6 @@ import ndimensionMap from "src/images/workplaces/ndimension/map.png"
 import GrowratioDetails from "src/components/Work/WorkExperienceCard/GrowratioDetails"
 import NdimensionDetails from "src/components/Work/WorkExperienceCard/NdimensionDetails"
 import ZanbatoDetails from "src/components/Work/WorkExperienceCard/ZanbatoDetails"
-import frameworks from "src/data/frameworks"
 
 export const growratio = {
   company: {
@@ -56,14 +55,14 @@ export const growratio = {
     },
   ],
   skillsRequired: [
-    frameworks.react,
-    frameworks.redux,
-    frameworks.reactnative,
-    frameworks.materialui,
-    frameworks.docker,
-    frameworks.python,
-    frameworks.django,
-    frameworks.firebase,
+    "react",
+    "redux",
+    "reactnative",
+    "materialui",
+    "docker",
+    "python",
+    "django",
+    "firebase",
   ],
 }
 
@@ -96,12 +95,7 @@ export const zanbato = {
       ],
     },
   ],
-  skillsRequired: [
-    frameworks.react,
-    frameworks.flux,
-    frameworks.python,
-    frameworks.django,
-  ],
+  skillsRequired: ["react", "flux", "python", "django"],
 }
 
 export const ndimension = {
@@ -131,5 +125,5 @@ export const ndimension = {
       ],
     },
   ],
-  skillsRequired: [frameworks.django, frameworks.python, frameworks.javascript],
+  skillsRequired: ["django", "python", "javascript"],
 }

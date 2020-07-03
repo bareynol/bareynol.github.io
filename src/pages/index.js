@@ -10,6 +10,7 @@ import Toast from "src/components/Toast"
 import projectData from "src/data/projects"
 
 import ProjectCardList from "src/components/ProjectCardList"
+import FrameworkItem from "src/components/FrameworkItem"
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -89,11 +90,15 @@ const IndexPage = () => {
 
         <Typography paragraph>Thanks for checking me out!</Typography>
         <Typography paragraph>
-          I am a Full-Stack Web Developer specializing in{" "}
-          <Highlighted>React.js</Highlighted> frontends,{" "}
-          <Highlighted>React-Native</Highlighted> mobile apps, and{" "}
-          <Highlighted>Django</Highlighted> ||{" "}
-          <Highlighted>Node.js</Highlighted> backends.
+          {`I am a Full-Stack Web Developer specializing in `}
+          <FrameworkItem variant="react" inline link />
+          {` frontends, `}
+          <FrameworkItem variant="reactnative" inline link />
+          {` mobile apps, and `}
+          <FrameworkItem variant="django" inline link />
+          {` || `}
+          <FrameworkItem variant="nodejs" inline link />
+          {` backends.`}
         </Typography>
 
         <Typography paragraph>

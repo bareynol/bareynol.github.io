@@ -1,6 +1,5 @@
 import React from "react"
 import FrameworkList from "./FrameworkList"
-import frameworks from "src/data/frameworks"
 
 export default {
   component: FrameworkList,
@@ -10,11 +9,11 @@ export default {
 }
 
 export const frameworkData = [
-  frameworks.docker,
-  frameworks.nodejs,
-  frameworks.typescript,
-  frameworks.materialui,
-  frameworks.react,
+  "docker",
+  "nodejs",
+  "typescript",
+  "materialui",
+  "react",
 ]
 
 export const Default = () => <FrameworkList frameworks={frameworkData} />

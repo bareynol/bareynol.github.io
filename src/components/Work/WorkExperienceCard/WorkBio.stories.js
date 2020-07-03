@@ -1,6 +1,5 @@
 import React from "react"
 import WorkBio from "./WorkBio"
-import frameworks from "src/data/frameworks"
 import growratioMap from "src/images/workplaces/growratio/map.png"
 import { Grid } from "@material-ui/core"
 
@@ -11,13 +10,7 @@ export default {
 }
 
 export const workBioData = {
-  skillsRequired: [
-    frameworks.react,
-    frameworks.redux,
-    frameworks.reactnative,
-    frameworks.materialui,
-    frameworks.docker,
-  ],
+  skillsRequired: ["react", "redux", "reactnative", "materialui", "docker"],
   company: {
     name: "Test Company Inc.",
     location: "Toronto, ON, Canada",

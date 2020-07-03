@@ -1,6 +1,6 @@
 import React from "react"
 import FrameworkItem from "./FrameworkItem"
-import frameworks from "src/data/frameworks"
+import { Typography } from "@material-ui/core"
 
 export default {
   component: FrameworkItem,
@@ -8,11 +8,27 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const Docker = () => <FrameworkItem item={frameworks.docker} />
-export const NodeJs = () => <FrameworkItem item={frameworks.nodejs} />
-export const Typescript = () => <FrameworkItem item={frameworks.typescript} />
-export const ReactFramework = () => <FrameworkItem item={frameworks.react} />
-export const MaterialUi = () => <FrameworkItem item={frameworks.materialui} />
-export const Redux = () => <FrameworkItem item={frameworks.redux} />
-export const Flux = () => <FrameworkItem item={frameworks.flux} />
-export const MongoDB = () => <FrameworkItem item={frameworks.mongodb} />
+export const Inline = () => (
+  <div>
+    <Typography>
+      inline framework <FrameworkItem variant="docker" inline /> end text
+    </Typography>
+  </div>
+)
+export const InlineLink = () => (
+  <div>
+    <Typography>
+      inline framework as a link <FrameworkItem variant="docker" inline link />{" "}
+      end text
+    </Typography>
+  </div>
+)
+export const AsLink = () => <FrameworkItem variant="docker" link />
+export const Docker = () => <FrameworkItem variant="docker" />
+export const NodeJs = () => <FrameworkItem variant="nodejs" />
+export const Typescript = () => <FrameworkItem variant="typescript" />
+export const ReactFramework = () => <FrameworkItem variant="react" />
+export const MaterialUi = () => <FrameworkItem variant="materialui" />
+export const Redux = () => <FrameworkItem variant="redux" />
+export const Flux = () => <FrameworkItem variant="flux" />
+export const MongoDB = () => <FrameworkItem variant="mongodb" />
