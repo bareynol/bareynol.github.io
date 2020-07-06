@@ -9,7 +9,7 @@ const Projects = () => (
   <Layout>
     <SEO title="Home" />
     <Container>
-      <Typography gutterBottom variant="h4" style={{ marginTop: 32 }}>
+      <Typography gutterBottom variant="h3" style={{ marginTop: 32 }}>
         Projects
       </Typography>
 

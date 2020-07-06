@@ -23,8 +23,11 @@ const ResumePage = () => {
 
   return (
     <Layout>
-      <SEO title="Resume" />
+      <SEO title="Résumé" />
       <Container>
+        <Typography variant="h3" style={{ marginTop: 32 }}>
+          Résumé
+        </Typography>
         <div className={classes.marginSpacing}>
           <Divider />
           <Grid
@@ -69,11 +72,11 @@ const ResumePage = () => {
           <Divider />
         </div>
 
-        <Typography variant="h3">Education</Typography>
+        <Typography variant="h4">Education</Typography>
         <Education />
 
         {/* Work Experience */}
-        <Typography variant="h3" style={{ marginTop: 36 }}>
+        <Typography variant="h4" style={{ marginTop: 36 }}>
           Work Experience
         </Typography>
         <Grid container spacing={0} direction="column">

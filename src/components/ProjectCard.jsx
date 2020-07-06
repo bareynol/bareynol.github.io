@@ -115,7 +115,13 @@ function ProjectCard({
             <Button size="small" color="primary">
               Details
             </Button>
-            <Button size="small" color="secondary">
+            <Button
+              size="small"
+              color="secondary"
+              href={url}
+              target="_blank"
+              rel="noreferrer"
+            >
               View Source
             </Button>
           </CardActions>
