@@ -18,13 +18,22 @@ import {
   Typography,
   ThemeProvider,
   Paper,
+  IconButton,
 } from "@material-ui/core"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
+import GitlabIcon from "mdi-material-ui/Gitlab"
 import theme from "src/theme"
 
 const useStyles = makeStyles({
   footer: {
     marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
+  },
+  socialIcons: {
+    textAlign: "center",
+    "& > *": {
+      margin: theme.spacing(1),
+    },
   },
 })
 
@@ -46,18 +55,7 @@ const Layout = ({ children }) => {
       <Container maxWidth="lg">
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
-        <footer>
-          <Container maxWidth="lg">
-            <Paper variant="outlined" className={classes.footer}>
-              <Typography variant="h6" align="center" gutterBottom>
-                © {new Date().getFullYear()}
-              </Typography>
-              <Typography variant="subtitle1" align="center">
-                Something here is afooter
-              </Typography>
-            </Paper>
-          </Container>
-        </footer>
+        <Footer />
       </Container>
     </ThemeProvider>
   )
@@ -68,3 +66,44 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const Footer = () => {
+  const classes = useStyles()
+  return (
+    <footer>
+      <Container maxWidth="lg">
+        <Paper variant="outlined" className={classes.footer}>
+          <Typography
+            variant="caption"
+            style={{ color: "rgba(255,255,255,0.1)" }}
+            align="center"
+            component="div"
+          >
+            something here is afooter
+          </Typography>
+          <div className={classes.socialIcons}>
+            <IconButton
+              color="primary"
+              href="https://www.linkedin.com/in/brian-reynolds-1a918278/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon />
+            </IconButton>
+            <IconButton
+              color="primary"
+              href="https://gitlab.com/users/bareynol/projects"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitlabIcon />
+            </IconButton>
+          </div>
+          <Typography variant="subtitle1" align="center" gutterBottom>
+            © {new Date().getFullYear()} Brian Reynolds
+          </Typography>
+        </Paper>
+      </Container>
+    </footer>
+  )
+}

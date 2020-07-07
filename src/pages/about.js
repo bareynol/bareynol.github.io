@@ -216,6 +216,10 @@ const About = () => (
   <Layout>
     <SEO title="About Me" />
     <Container>
+      <Typography variant="h3" style={{ marginTop: 32 }}>
+        About Me
+      </Typography>
+
       <ContactDetails />
 
       {/** Table of contents **/}
@@ -253,7 +257,7 @@ const ContactDetails = () => (
   <Card
     variant="outlined"
     elevation={0}
-    style={{ backgroundColor: "#111111", marginTop: 32, marginBottom: 32 }}
+    style={{ backgroundColor: "#111111", marginBottom: 32 }}
   >
     <CardContent>
       <Grid container direction="column" alignItems="center">

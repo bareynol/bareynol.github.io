@@ -23,6 +23,9 @@ const SimpleResumePage = () => {
     <Layout>
       <SEO title="Simple Resume" />
       <Container>
+        <Typography variant="h3" style={{ marginTop: 32 }}>
+          Résumé
+        </Typography>
         <div className={classes.marginSpacing}>
           <Divider />
           <Grid

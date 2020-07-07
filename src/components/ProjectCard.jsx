@@ -109,13 +109,20 @@ function ProjectCard({
             style={{
               flexGrow: 1,
               alignItems: "flex-end",
-              justifyContent: "space-between",
+              justifyContent: "flex-end",
             }}
           >
-            <Button size="small" color="primary">
+            {/* <Button size="small" color="primary">
               Details
-            </Button>
-            <Button size="small" color="secondary">
+            </Button> */}
+            <Button
+              size="small"
+              color="secondary"
+              href={url}
+              target="_blank"
+              rel="noreferrer"
+              disabled={url == null}
+            >
               View Source
             </Button>
           </CardActions>
