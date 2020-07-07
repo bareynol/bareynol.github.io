@@ -20,7 +20,7 @@ export default [
   },
   {
     title: "The Cookbook",
-    url: "#",
+    url: null,
     description:
       "MEAN stack web server that stores recipes and presents them in an easy to read format. Includes tools to scrape content from recipe websites.",
     frameworks: [
