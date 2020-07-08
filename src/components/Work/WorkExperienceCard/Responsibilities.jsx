@@ -26,8 +26,12 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.default,
   },
   list: {
-    border: "solid 1px",
-    borderColor: theme.palette.divider,
+    marginTop: 0,
+    "&> li": {
+      lineHeight: "2em",
+    },
+    // border: "solid 1px",
+    // borderColor: theme.palette.divider,
   },
 }))
 
@@ -44,8 +48,16 @@ function Responsibilities({ responsibilities }) {
             <Typography variant="h6" className={classes.responsibilityTitle}>
               {resp.title}
             </Typography>
-            <Paper>
-              <List className={classes.list} disablePadding>
+            <ul className={classes.list}>
+              {resp.specifics.map((spec, index) => (
+                <li key={index}>
+                  <Typography variant="body2">{spec}</Typography>
+                </li>
+              ))}
+            </ul>
+            {/*<Paper>
+              
+               <List className={classes.list} disablePadding>
                 {resp.specifics.map((spec, index) => (
                   <ListItem
                     dense
@@ -56,7 +68,7 @@ function Responsibilities({ responsibilities }) {
                   </ListItem>
                 ))}
               </List>
-            </Paper>
+            </Paper> */}
           </div>
         ))}
       </CardContent>
