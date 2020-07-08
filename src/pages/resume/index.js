@@ -62,7 +62,7 @@ const ResumePage = () => {
                   variant="contained"
                   color="secondary"
                   component={GatsbyLink}
-                  to="/resume/simple"
+                  to="/resume/simple/"
                 >
                   View Simplified
                 </Button>

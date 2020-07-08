@@ -7,7 +7,7 @@ import {
   makeStyles,
 } from "@material-ui/core"
 
-import uwaterlooLogo from "src/images/uwaterloo_logo.png"
+import uwaterlooLogo from "src/images/uwaterloo_logo.webp"
 
 const useStyles = makeStyles(theme => ({
   container: {

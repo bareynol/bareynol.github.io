@@ -39,9 +39,9 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const sections = [
-  { title: "Projects", url: "/projects" },
+  { title: "Projects", url: "/projects/" },
   { title: "", url: null }, // for spacing
-  { title: "Résumé", url: "/resume" },
+  { title: "Résumé", url: "/resume/" },
 ]
 
 function Header(props) {
@@ -98,7 +98,7 @@ function Titlebar(props) {
           size="small"
           color="primary"
           component={GatsbyLink}
-          to="/about"
+          to="/about/"
           style={{ flex: 1 }}
         >
           About Me

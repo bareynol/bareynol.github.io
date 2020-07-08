@@ -97,7 +97,7 @@ const IndexPage = () => {
 
         <Typography paragraph>
           Keep scrolling to see some of my projects or{" "}
-          <Link component={GatsbyLink} to="/resume" color="secondary">
+          <Link component={GatsbyLink} to="/resume/" color="secondary">
             checkout my resume here
           </Link>
         </Typography>

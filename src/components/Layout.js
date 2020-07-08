@@ -87,6 +87,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/brian-reynolds-1a918278/"
               target="_blank"
               rel="noreferrer"
+              aria-label="View LinkedIn for Brian Reynolds"
             >
               <LinkedInIcon />
             </IconButton>
@@ -95,6 +96,7 @@ const Footer = () => {
               href="https://gitlab.com/users/bareynol/projects"
               target="_blank"
               rel="noreferrer"
+              aria-label="View Gitlab of Brian Reynolds"
             >
               <GitlabIcon />
             </IconButton>

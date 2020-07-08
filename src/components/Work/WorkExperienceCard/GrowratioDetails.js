@@ -1,6 +1,6 @@
 import React from "react"
-import logo from "src/images/workplaces/growratio/growratio-wordmark-herolight.png"
-import devices from "src/images/workplaces/growratio/devices.png"
+import logo from "src/images/workplaces/growratio/growratio-wordmark-herolight.webp"
+import devices from "src/images/workplaces/growratio/devices.webp"
 import background from "src/images/workplaces/growratio/oldbg.jpg"
 import { Grid, Typography, CardMedia, makeStyles } from "@material-ui/core"
 

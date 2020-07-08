@@ -11,7 +11,7 @@ import {
   Avatar,
 } from "@material-ui/core"
 import FrameworkList from "src/components/FrameworkList"
-import profilePicture from "src/images/me.jpg"
+import profilePicture from "src/images/me.webp"
 
 const content = [
   // {
@@ -261,7 +261,11 @@ const ContactDetails = () => (
   >
     <CardContent>
       <Grid container direction="column" alignItems="center">
-        <Avatar style={{ width: 128, height: 128 }} src={profilePicture} />
+        <Avatar
+          style={{ width: 128, height: 128 }}
+          src={profilePicture}
+          alt="Brian Reynolds"
+        />
         <Typography align="center" style={{ marginTop: 8 }}>
           I am Brian Reynolds, a programmer from Ontario, Canada
         </Typography>

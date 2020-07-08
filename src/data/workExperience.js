@@ -1,8 +1,8 @@
 import React from "react"
 
-import growratioMap from "src/images/workplaces/growratio/map.png"
-import zanbatoMap from "src/images/workplaces/zanbato/map.png"
-import ndimensionMap from "src/images/workplaces/ndimension/map.png"
+import growratioMap from "src/images/workplaces/growratio/map.webp"
+import zanbatoMap from "src/images/workplaces/zanbato/map.webp"
+import ndimensionMap from "src/images/workplaces/ndimension/map.webp"
 import GrowratioDetails from "src/components/Work/WorkExperienceCard/GrowratioDetails"
 import NdimensionDetails from "src/components/Work/WorkExperienceCard/NdimensionDetails"
 import ZanbatoDetails from "src/components/Work/WorkExperienceCard/ZanbatoDetails"

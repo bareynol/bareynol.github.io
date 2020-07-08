@@ -1,6 +1,6 @@
 import React from "react"
 import logo from "src/images/workplaces/ndimension/logo.png"
-import background from "src/images/workplaces/ndimension/background.png"
+import background from "src/images/workplaces/ndimension/background.webp"
 import { CardMedia, Grid, Typography, makeStyles } from "@material-ui/core"
 
 const useStyles = makeStyles(theme => ({
