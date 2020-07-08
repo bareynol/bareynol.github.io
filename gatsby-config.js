@@ -27,14 +27,17 @@ module.exports = {
         icon: `src/images/br-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Roboto"],
-        },
-      },
-    },
+    // LOAD FONTS VIA GATSBY PLUGIN
+    // CURRENTLY DISABLED. LOADING THROUGH gatsby-ssr.js
+    // SO THAT FONTS CAN BE PRELOADED
+    // {
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     google: {
+    //       families: ["Roboto"],
+    //     },
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
