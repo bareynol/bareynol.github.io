@@ -12,6 +12,7 @@ import ReduxIcon from "src/components/CustomIcons/Redux"
 import FluxIcon from "src/components/CustomIcons/Flux"
 import StorybookIcon from "src/components/CustomIcons/Storybook"
 import ReactNativePaperIcon from "src/components/CustomIcons/ReactNativePaper"
+import DjangoIcon from "src/components/CustomIcons/Django"
 import PostgreSQLIcon from "src/components/CustomIcons/PostgreSQL"
 import MongoDbIcon from "src/components/CustomIcons/MongoDb"
 import FirebaseIcon from "mdi-material-ui/Firebase"
@@ -89,7 +90,7 @@ export default {
   },
   django: {
     title: "Django",
-    icon: <Python />,
+    icon: <DjangoIcon />,
     link: "https://www.djangoproject.com/",
   },
   firebase: {
