@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "jsx": "react",
-    "checkJs": true,
-    "baseUrl": ".",
-    "noLib": false,
-    "skipLibCheck": true
-  }
-}
