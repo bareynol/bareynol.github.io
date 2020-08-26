@@ -61,14 +61,14 @@ const content = [
     id: "My_dev_stack",
     body: (
       <>
-        <Typography paragraph>
+        {/* <Typography paragraph>
           {`Everyone's got a dev stack they're most experienced with
           or prefer to work in right? I always enjoy finding new ways
           of building things, but here are my most experienced stacks
           and favourite goto's`}
-        </Typography>
+        </Typography> */}
 
-        <Typography variant="subtitle1">Developer Environment</Typography>
+        {/* <Typography variant="subtitle1">Developer Environment</Typography>
         <div style={{ paddingLeft: 16, marginBottom: 32 }}>
           <FrameworkList title="IDE" frameworks={["vscode"]} link indent />
           <FrameworkList
@@ -97,7 +97,7 @@ const content = [
             Storybook is great for developing UI components in isolation while visually testing various
             possible inputs for the component, and helps with setting up automated frontend tests`}
           </Typography>
-        </div>
+        </div> */}
 
         <Typography variant="subtitle1">Web Frontend</Typography>
         <div style={{ paddingLeft: 16, marginBottom: 32 }}>

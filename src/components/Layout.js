@@ -21,7 +21,7 @@ import {
   IconButton,
 } from "@material-ui/core"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
-import GitlabIcon from "mdi-material-ui/Gitlab"
+import GitHubIcon from "@material-ui/icons/GitHub"
 import theme from "src/theme"
 
 const useStyles = makeStyles({
@@ -93,12 +93,12 @@ const Footer = () => {
             </IconButton>
             <IconButton
               color="primary"
-              href="https://gitlab.com/users/bareynol/projects"
+              href="https://github.com/bareynol"
               target="_blank"
               rel="noreferrer"
               aria-label="View Gitlab of Brian Reynolds"
             >
-              <GitlabIcon />
+              <GitHubIcon />
             </IconButton>
           </div>
           <Typography variant="subtitle1" align="center" gutterBottom>

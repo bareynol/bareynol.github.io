@@ -47,7 +47,15 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function ProjectCard({
-  project: { title, url, description, frameworks, image, underConstruction },
+  project: {
+    title,
+    url,
+    demo,
+    description,
+    frameworks,
+    image,
+    underConstruction,
+  },
 }) {
   const classes = useStyles()
   return (
@@ -109,12 +117,21 @@ function ProjectCard({
             style={{
               flexGrow: 1,
               alignItems: "flex-end",
-              justifyContent: "flex-end",
+              justifyContent: demo ? "space-between" : "flex-end",
             }}
           >
-            {/* <Button size="small" color="primary">
-              Details
-            </Button> */}
+            {demo && (
+              <Button
+                size="small"
+                color="primary"
+                href={demo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Demo
+              </Button>
+            )}
+
             <Button
               size="small"
               color="secondary"

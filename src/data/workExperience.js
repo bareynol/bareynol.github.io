@@ -157,7 +157,8 @@ export const ndimension = {
       title: "Analysis",
       specifics: [
         "Develop tool to analyse Intrusion Detection System (IDS) log files and create human-readable reports (Python)",
-        "Develop scheduling tool for the above to automatically generate reports for clients and handle concurrent processing of multiple large datasets (Python/Bash)",
+        "Develop scheduling tool for the above to automatically generate reports for clients",
+        "Handle concurrent processing of multiple large datasets (Python/Bash)",
       ],
     },
     {

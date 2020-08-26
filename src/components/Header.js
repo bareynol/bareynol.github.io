@@ -4,7 +4,7 @@ import Toolbar from "@material-ui/core/Toolbar"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import Link from "@material-ui/core/Link"
-import Gitlab from "mdi-material-ui/Gitlab"
+import GitHubIcon from "@material-ui/icons/GitHub"
 import { Link as GatsbyLink } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
@@ -121,14 +121,15 @@ function Titlebar(props) {
         <Button
           color="primary"
           size="small"
-          endIcon={<Gitlab fontSize="small" className={classes.hideSmall} />}
+          endIcon={
+            <GitHubIcon fontSize="small" className={classes.hideSmall} />
+          }
           style={{ flex: 1 }}
-          href="https://gitlab.com/users/bareynol/projects"
+          href="https://github.com/bareynol"
           target="_blank"
           rel="noreferrer"
         >
-          <span className={classes.hideSmall}>{`View`}&nbsp; </span>
-          {`My Gitlab`}
+          Github
         </Button>
       </Toolbar>
     </>
